@@ -7,116 +7,90 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body, html {
-      height: 100%;
-      overflow: hidden;
-      font-family: 'Playfair Display', serif;
-    }
+    body, html { height: 100%; font-family: 'Playfair Display', serif; background: black; color: white; }
 
     #bg-video {
       position: fixed;
       top: 0; left: 0;
-      min-width: 100%;
-      min-height: 100%;
-      z-index: -1;
+      width: 100%; height: 100%;
       object-fit: cover;
+      z-index: -2;
     }
 
     .overlay {
       position: fixed;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 0;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: -1;
     }
 
     header {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%;
-      padding: 20px 40px;
-      background: rgba(0, 0, 0, 0.5);
       display: flex;
       justify-content: space-between;
       align-items: center;
-      z-index: 5;
+      padding: 20px 40px;
     }
 
     .logo {
-      font-size: 1.5em; color: white; font-weight: bold; letter-spacing: 1px;
+      font-size: 1.5em;
+      font-weight: bold;
+      color: white;
     }
 
     nav a {
-      color: #ddd; margin-left: 25px;
-      text-decoration: none; font-size: 1em;
-      transition: color 0.3s;
+      color: white;
+      margin-left: 25px;
+      text-decoration: none;
+      font-size: 1em;
     }
 
-    nav a:hover { color: white; }
+    nav a:hover { text-decoration: underline; }
 
     .content {
-      position: relative; z-index: 1;
-      height: 100%;
-      display: flex; flex-direction: column;
-      justify-content: center; align-items: center;
-      color: white; text-align: center;
+      text-align: center;
+      margin-top: 60px;
       padding: 20px;
     }
 
     h1 {
-      font-size: 3em; letter-spacing: 2px;
-      animation: fadeIn 2s ease-out;
-      margin-bottom: 40px;
+      font-size: 2.5em;
+      margin-bottom: 30px;
     }
 
     .service-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* auto-fit for responsiveness */
-  gap: 20px;
-  width: 100%;
-  max-width: 1000px;
-  margin: 40px auto 0 auto;
-  padding: 0 20px;
-}
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
 
-.service-btn {
-  background: transparent;
-  border: 2px solid white;
-  color: white;
-  padding: 15px 20px;
-  border-radius: 30px;
-  font-size: 1em;
-  text-align: center;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  display: block;
-}
+    .service-btn {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+      padding: 15px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
 
-.service-btn:hover {
-  background: white;
-  color: black;
-}
+    .service-btn:hover {
+      background: white;
+      color: black;
+    }
 
     footer {
-      position: absolute;
-      bottom: 10px;
-      width: 100%;
       text-align: center;
+      margin-top: 40px;
       color: #ccc;
       font-size: 0.9em;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
     @media (max-width: 600px) {
       h1 { font-size: 2em; }
-      nav a {
-        font-size: 0.9em;
-        margin-left: 15px;
-      }
     }
   </style>
 </head>
@@ -126,37 +100,31 @@
     <source src="https://websites.godaddy.com/categories/v4/videos/raw/video/uA41GmyyG8IMaxXdb" type="video/mp4" />
     Your browser does not support HTML5 video.
   </video>
-
   <div class="overlay"></div>
 
   <header>
     <div class="logo">RIHAN CSC CENTER LADWA</div>
     <nav>
       <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="#">Contact</a>
+      <a href="#">Services</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
   <div class="content">
-  <h1>Our Services</h1>
-  <div class="service-grid">
-    <a href="https://example.com/aadhar" class="service-btn">Aadhar Card Update & Print</a>
-    <a href="https://forms.gle/E1hC2LB8U3ndWHJ39" class="service-btn">PAN Card Apply</a>
-    <a href="https://forms.gle/i1ReKtgHAitNNk7c8" class="service-btn">Ration Card Apply</a>
-    <a href="https://forms.gle/en841yw1xUAvjBPS8" class="service-btn">Birth / Death Certificate</a>
-    <a href="https://example.com/voter" class="service-btn">Voter ID Apply & Correction</a>
-    <a href="https://example.com/yojana" class="service-btn">Pension, Yojana</a>
-    <a href="https://example.com/birth" class="service-btn">Birth / Death Certificate</a>
-    <a href="https://example.com/voter" class="service-btn">Voter ID Apply & Correction</a>
-    <a href="https://example.com/yojana" class="service-btn">Pension, Yojana</a>
+    <h1>Our Services</h1>
+    <div class="service-grid">
+      <a href="#" class="service-btn">Aadhar Card Update & Print</a>
+      <a href="#" class="service-btn">PAN Card Apply</a>
+      <a href="#" class="service-btn">Ration Card Apply</a>
+      <a href="#" class="service-btn">Birth / Death Certificate</a>
+      <a href="#" class="service-btn">Voter ID Apply & Correction</a>
+      <a href="#" class="service-btn">Pension, Yojana</a>
+    </div>
   </div>
-</div>
-
 
   <footer>
     © 2025 RIHAN CSC CENTER LADWA. All Rights Reserved.
   </footer>
-
 </body>
 </html>
