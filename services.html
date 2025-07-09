@@ -69,8 +69,9 @@
       margin: auto;
     }
 
-    .content h1 {
-      font-size: 2.8em;
+    h1 {
+      font-size: 3em; letter-spacing: 2px;
+      animation: fadeIn 2s ease-out;
       margin-bottom: 40px;
     }
 
@@ -107,8 +108,12 @@
       position: relative;
       z-index: 1;
     }
+@keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-    @media (max-width: 600px) {
+     @media (max-width: 600px) {
       h1 { font-size: 2em; }
       nav a {
         font-size: 0.9em;
