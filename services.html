@@ -70,31 +70,32 @@
     }
 
     .service-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
-      max-width: 1000px;
-      width: 100%;
-      padding: 0 20px;
-    }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* auto-fit for responsiveness */
+  gap: 20px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 40px auto 0 auto;
+  padding: 0 20px;
+}
 
-    .service-btn {
-      background: transparent;
-      border: 2px solid white;
-      color: white;
-      padding: 12px 25px;
-      border-radius: 50px;
-      font-size: 1.1em;
-      cursor: pointer;
-      transition: all 0.3s ease-in-out;
-      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
-    }
+.service-btn {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 30px;
+  font-size: 1em;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: block;
+}
 
-    .service-btn:hover {
-      background: white;
-      color: black;
-      transform: scale(1.05);
-    }
+.service-btn:hover {
+  background: white;
+  color: black;
+}
 
     footer {
       position: absolute;
