@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RIHAN CSC CENTER LADWA - Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      height: 100%;
+      font-family: 'Playfair Display', serif;
+      color: white;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    #bg-video {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      z-index: -1;
+    }
+
+    header {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      padding: 20px 40px;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 5;
+    }
+
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 25px;
+      text-decoration: none;
+      font-size: 1em;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #f8cdda;
+    }
+
+    .centered-text {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .centered-text h1 {
+      font-size: 3em;
+      letter-spacing: 2px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+
+      nav a {
+        margin-left: 0;
+        margin-right: 20px;
+        display: inline-block;
+      }
+
+      .centered-text h1 {
+        font-size: 2em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Video -->
+  <video autoplay muted loop id="bg-video">
+    <source src="https://websites.godaddy.com/categories/v4/videos/raw/video/uA41GmyyG8IMaxXdb" type="video/mp4" />
+  </video>
+  <div class="overlay"></div>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">RIHAN CSC CENTER LADWA</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Centered Text -->
+  <div class="centered-text">
+    <h1>Welcome to RIHAN CSC CENTER LADWA</h1>
+  </div>
+
+
+  <!-- Footer -->
+  <footer style="background: rgba(0,0,0,0.7); text-align: center; padding: 20px; font-size: 0.9em; color: #bbb;">
+    © 2025 RIHAN CSC CENTER LADWA. All Rights Reserved.
+  </footer>
+</body>
+
+</html>

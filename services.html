@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Services - RIHAN CSC CENTER LADWA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body, html {
+      height: 100%;
+      overflow: hidden;
+      font-family: 'Playfair Display', serif;
+    }
+
+    #bg-video {
+      position: fixed;
+      top: 0; left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+      object-fit: cover;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+
+    header {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      padding: 20px 40px;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 5;
+    }
+
+    .logo {
+      font-size: 1.5em; color: white; font-weight: bold; letter-spacing: 1px;
+    }
+
+    nav a {
+      color: #ddd; margin-left: 25px;
+      text-decoration: none; font-size: 1em;
+      transition: color 0.3s;
+    }
+
+    nav a:hover { color: white; }
+
+    .content {
+      position: relative; z-index: 1;
+      height: 100%;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      color: white; text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 3em; letter-spacing: 2px;
+      animation: fadeIn 2s ease-out;
+      margin-bottom: 40px;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      width: 100%;
+      padding: 0 20px;
+    }
+
+    .service-btn {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 50px;
+      font-size: 1.1em;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+    }
+
+    .service-btn:hover {
+      background: white;
+      color: black;
+      transform: scale(1.05);
+    }
+
+    footer {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      color: #ccc;
+      font-size: 0.9em;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2em; }
+      nav a {
+        font-size: 0.9em;
+        margin-left: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <video autoplay muted loop id="bg-video">
+    <source src="https://websites.godaddy.com/categories/v4/videos/raw/video/uA41GmyyG8IMaxXdb" type="video/mp4" />
+    Your browser does not support HTML5 video.
+  </video>
+
+  <div class="overlay"></div>
+
+  <header>
+    <div class="logo">RIHAN CSC CENTER LADWA</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <div class="content">
+    <h1>Our Services</h1>
+    <div class="service-grid">
+      <button class="service-btn"> Aadhar Card Update & Print</button>
+      <button class="service-btn"> PAN Card Apply</button>
+      <button class="service-btn"> Ration Card Apply</button>
+      <button class="service-btn"> Birth / Death Certificate</button>
+      <button class="service-btn"> Voter ID Apply & Correction</button>
+      <button class="service-btn"> Pension, Yojana </button>
+      <button class="service-btn"> Birth / Death Certificate</button>
+      <button class="service-btn"> Voter ID Apply & Correction</button>
+      <button class="service-btn"> Pension, Yojana </button>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 RIHAN CSC CENTER LADWA. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
